@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ClientSemestr5.controllers.StudentAddChangeController">
+    <children>
+        <Label layoutX="225.0" layoutY="42.0" text="Фамилия:" AnchorPane.leftAnchor="225.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="225.0" layoutY="97.0" text="Имя:" AnchorPane.leftAnchor="225.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="225.0" layoutY="154.0" text="Группа:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="groupNameField" focusTraversable="false" layoutX="225.0" layoutY="174.0" prefHeight="26.0" prefWidth="150.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="225.0" />
+        <TextField fx:id="firstnameField" focusTraversable="false" layoutX="225.0" layoutY="117.0" AnchorPane.leftAnchor="225.0" />
+        <TextField fx:id="lastnameField" focusTraversable="false" layoutX="225.0" layoutY="62.0" AnchorPane.leftAnchor="225.0" />
+        <Button fx:id="UpdateChangeButton" focusTraversable="false" layoutX="370.0" layoutY="322.0" mnemonicParsing="false" onAction="#onAddChangeButtonClick" prefHeight="30.0" prefWidth="150.0" text="Добавить" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="80.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <Button focusTraversable="false" layoutX="79.0" layoutY="322.0" mnemonicParsing="false" onAction="#loadStudentsScene" prefHeight="26.0" prefWidth="150.0" text="Назад" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="370.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <RadioButton focusTraversable="false" layoutX="200.0" layoutY="261.0" mnemonicParsing="false" selected="true" text="Бесплатная">
+            <toggleGroup>
+                <ToggleGroup fx:id="isAdmin" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="radioPaid" focusTraversable="false" layoutX="315.0" layoutY="261.0" mnemonicParsing="false" text="Платная" toggleGroup="$isAdmin" />
+      <Label layoutX="244.0" layoutY="233.0" prefHeight="20.0" prefWidth="110.0" text="Форма обучения">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ClientSemestr5.controllers.SubjectsController">
+   <children>
+      <ToolBar prefHeight="40.0" prefWidth="880.0">
+        <items>
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#onStudentsButtonClick" prefHeight="25.0" prefWidth="120.0" text="Студенты" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#onGroupsButtonClick" prefHeight="25.0" prefWidth="120.0" text="Группы" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#onFacultiesButtonClick" prefHeight="25.0" prefWidth="120.0" text="Факультеты" />
+            <Button defaultButton="true" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Предметы" underline="true" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#onScholarshipButtonClick" prefHeight="25.0" prefWidth="120.0" text="Размер стипендий" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#onUsersButtonClick" prefHeight="25.0" prefWidth="120.0" text="Пользователи" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#onSettingsButtonClick" prefHeight="25.0" prefWidth="120.0" text="Настройки" />
+        </items>
+      </ToolBar>
+       <Button focusTraversable="false" layoutX="14.0" layoutY="460.0" mnemonicParsing="false" onAction="#onExitButtonClick" prefHeight="25.0" prefWidth="120.0" text="Выход" />
+      <TableView fx:id="subjectsTableView" focusTraversable="false" layoutX="308.0" layoutY="79.0" prefHeight="266.0" prefWidth="264.0">
+         <columns>
+            <TableColumn fx:id="subjectNameColumn" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Название" />
+            <TableColumn fx:id="hoursNumberColumn" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Количество часов" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button fx:id="addButton" focusTraversable="false" layoutX="245.0" layoutY="361.0" mnemonicParsing="false" onAction="#onAddButtonClick" prefHeight="26.0" prefWidth="120.0" text="Добавить" />
+      <Button fx:id="changeButton" focusTraversable="false" layoutX="380.0" layoutY="361.0" mnemonicParsing="false" onAction="#onChangeButtonClick" prefHeight="26.0" prefWidth="120.0" text="Изменить" />
+      <Button fx:id="deleteButton" focusTraversable="false" layoutX="515.0" layoutY="361.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" prefHeight="26.0" prefWidth="120.0" text="Удалить" />
+      <ImageView fx:id="updateImageView" fitHeight="26.0" fitWidth="26.0" layoutX="582.0" layoutY="79.0" onMouseClicked="#onUpdateImageViewClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../reload_icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Button focusTraversable="false" layoutX="380.0" layoutY="402.0" mnemonicParsing="false" onAction="#onStatisticButtonClick" prefHeight="26.0" prefWidth="120.0" text="Статистика" />
+   </children>
+</AnchorPane>
